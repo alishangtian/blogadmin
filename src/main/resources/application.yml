@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: cardsort
+server:
+  port: 8080
