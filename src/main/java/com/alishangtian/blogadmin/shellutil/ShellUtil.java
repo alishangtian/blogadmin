@@ -13,8 +13,6 @@ import java.io.InputStreamReader;
  */
 @Log4j2
 public class ShellUtil {
-    private static String shellPath = "/home/maoxiaobing/workspace/blogadmin/src/main/resources/restart.sh";
-
     /**
      *
      */
@@ -22,9 +20,8 @@ public class ShellUtil {
         InputStreamReader stdISR = null;
         InputStreamReader errISR = null;
         Process process = null;
-        String command = shellPath;
         try {
-            process = Runtime.getRuntime().exec(command);
+            process = Runtime.getRuntime().exec("pwd");
             process.waitFor();
             String line;
             stdISR = new InputStreamReader(process.getInputStream());
